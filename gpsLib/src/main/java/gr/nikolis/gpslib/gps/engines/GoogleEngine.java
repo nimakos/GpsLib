@@ -54,9 +54,9 @@ public final class GoogleEngine extends LocationCallback implements OnSuccessLis
     private OnLocationUpdateListener onLocationUpdateListener;
 
     //optional parameters
-    private long UPDATE_INTERVAL;
-    private long FASTEST_INTERVAL;
-    private int PRIORITY;
+    private final long UPDATE_INTERVAL;
+    private final long FASTEST_INTERVAL;
+    private final int PRIORITY;
     private OnSpeedUpdateListener onSpeedUpdateListener;
     private OnSuccessListener onSuccessListener;
 
@@ -67,8 +67,8 @@ public final class GoogleEngine extends LocationCallback implements OnSuccessLis
     public static class Builder {
 
         //required parameters
-        private Context context;
-        private OnLocationUpdateListener onLocationUpdateListener;
+        private final Context context;
+        private final OnLocationUpdateListener onLocationUpdateListener;
 
         //optional parameters
         private int priority = LocationRequest.PRIORITY_HIGH_ACCURACY;

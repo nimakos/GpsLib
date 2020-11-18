@@ -27,9 +27,9 @@ public final class MapBoxEngine implements LocationEngineCallback<LocationEngine
     private OnLocationUpdateListener onLocationUpdateListener;
 
     //optional parameters
-    private long maxWaitTime, interval, fastestInterval;
-    private int priority;
-    private float displacement;
+    private final long maxWaitTime, interval, fastestInterval;
+    private final int priority;
+    private final float displacement;
 
     //class parameters
     private static MapBoxEngine INSTANCE;
@@ -37,8 +37,8 @@ public final class MapBoxEngine implements LocationEngineCallback<LocationEngine
 
     public static class Builder {
         //required parameters
-        private WeakReference<Context> contextWeakReference;
-        private OnLocationUpdateListener onLocationUpdateListener;
+        private final WeakReference<Context> contextWeakReference;
+        private final OnLocationUpdateListener onLocationUpdateListener;
 
         //optional parameters
         private long maxWaitTime = 0L, interval = 0L, fastestInterval = 1000L;

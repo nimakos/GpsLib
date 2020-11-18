@@ -21,8 +21,7 @@ public final class AndroidEngine implements LocationListener {
     private OnAndroidListener onAndroidListener;
 
     //Optional
-    private long myMinTime;
-    private long myMinDistance;
+    private final long myMinTime, myMinDistance;
 
     //class parameters
     private LocationManager locationManager;
@@ -30,8 +29,8 @@ public final class AndroidEngine implements LocationListener {
 
     public static class Builder {
         //Required
-        private Context context;
-        private OnAndroidListener onAndroidListener;
+        private final Context context;
+        private final OnAndroidListener onAndroidListener;
 
         //optional parameters
         private long minimumTime = 1000;
@@ -45,19 +44,16 @@ public final class AndroidEngine implements LocationListener {
 
         public Builder setMinimumDistance(long distance) {
             this.minimumDistance = distance;
-
             return this;
         }
 
         public Builder setMinimumTime(long time) {
             this.minimumTime = time;
-
             return this;
         }
 
         public Builder hasSingleInstance(boolean createSingleInstance) {
             this.createSingleInstance = createSingleInstance;
-
             return this;
         }
 
